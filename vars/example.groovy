@@ -6,7 +6,9 @@ def call() {
   cs = z.getDomains()
   for (c in cs) {
     if (c.getName() != null) {
-      println "username: ${c.getName()}"
+      creds = z.getCredentials(c)
+      //println "username: ${c.getName()}"
+      println creds.getUsername()
     }
   }
 }
