@@ -2,7 +2,9 @@ import com.cloudbees.plugins.credentials.CredentialsStore
 
 def call() {
 
-  CredentialsStore cs = new CredentialsStore()
-  print cs.getDisplayName()
+  cs = CredentialsStore.getCredentials()
+  for (c in cs) {
+    println "username: ${c}"
+  }
 }
 
