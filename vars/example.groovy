@@ -8,7 +8,7 @@ def call() {
     if (c.getName() != null) {
       creds = z.getCredentials(c)
       //println "username: ${c.getName()}"
-      println creds.getUsername()
+      println creds
     }
   }
 }
