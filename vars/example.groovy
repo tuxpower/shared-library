@@ -5,7 +5,7 @@ def call() {
   StoreImpl z = new StoreImpl()
   cs = z.getDomains()
   for (c in cs) {
-    println "username: ${c}"
+    println "username: ${c.getName()}"
   }
 }
 
