@@ -1,8 +1,8 @@
-import com.cloudbees.plugins.credentials
+import com.cloudbees.plugins.credentials.SystemCredentialsProvider.StoreImpl 
 
 def call() {
 
-  SystemCredentialsProvider.StoreImpl z = new StoreImpl()
+  StoreImpl z = new StoreImpl()
   cs = z.getDomains()
   for (c in cs) {
     println "username: ${c}"
