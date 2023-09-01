@@ -1,8 +1,8 @@
-#!/usr/bin/env groovy
+import com.cloudbees.plugins.credentials.CredentialsStore
 
 def call() {
 
-  cs = com.cloudbees.plugins.credentials.CredentialsStore.getDomains()
-  print cs
+  cs = CredentialsStore()
+  print cs.getDisplayName()
 }
 
