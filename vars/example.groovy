@@ -1,8 +1,6 @@
-import static com.cloudbees.plugins.credentials.CredentialsStore
-
 def call() {
 
-  cs = CredentialsStore.getDomains()
+  cs = com.cloudbees.plugins.credentials.CredentialsStore.getDomains()
   for (c in cs) {
     println "username: ${c}"
   }
