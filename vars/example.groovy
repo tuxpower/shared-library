@@ -2,7 +2,7 @@ import com.cloudbees.plugins.credentials.CredentialsStore
 
 def call() {
 
-  cs = CredentialsStore()
+  CredentialsStore cs = new CredentialsStore()
   print cs.getDisplayName()
 }
 
