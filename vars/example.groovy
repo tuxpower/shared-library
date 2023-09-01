@@ -8,10 +8,11 @@ def call() {
     if (c.getName() != null) {
       creds = z.getCredentials(c)
       //println "username: ${c.getName()}"
-      if (c instanceof com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl) {
+      /*if (c instanceof com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl) {
         //println creds
         echo 'oooooo'
-      }
+      }*/
+      println creds.getClass()
     }
   }
 }
