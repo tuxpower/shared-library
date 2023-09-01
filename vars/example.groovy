@@ -1,6 +1,6 @@
 def call() {
 
-  cs = com.cloudbees.plugins.credentials.CredentialsStore.getDomains()
+  cs = CredentialsStore.getDomains()
   for (c in cs) {
     println "username: ${c}"
   }
