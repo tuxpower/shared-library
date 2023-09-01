@@ -12,7 +12,9 @@ def call() {
         //println creds
         echo 'oooooo'
       }*/
-      println creds.getClass()
+      for (a in creds) {
+        println "${a.getUsername()}"
+      } 
     }
   }
 }
