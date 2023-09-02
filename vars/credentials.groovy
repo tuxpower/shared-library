@@ -2,16 +2,13 @@ import com.cloudbees.plugins.credentials.SystemCredentialsProvider.StoreImpl
 
 def call() {
     StoreImpl store = new StoreImpl()
-
-    // get list of all domains/folders
     domains = store.getDomains()
-    for (domain in domains) {
-        // if domain is global doesn't have a name
-        //if (domain.getName() != null) {
-
-        println "Name: ${domain.getName()}"
-        creds = store.getCredentials(domain)
-        for (c in creds) {
+    domains.each { d ->
+    //for (domain in domains) {
+        //if (d.getName() != null) {
+        println "Name: ${d.getName()}"
+        creds = store.getCredentials(d)
+        creds.each { c ->
             if (c instanceof com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl) {
                 println "Credentials of type Username/Password"
                 println "ID: ${c.getId()}"
@@ -29,5 +26,3 @@ def call() {
         }
     }
 }
-
-
