@@ -6,14 +6,14 @@ def call() {
   domains = store.getDomains()
   for (domain in domains) {
     if (domain.getName() != null) {
-      credentials = store.getCredentials(domain)
+      creds = store.getCredentials(domain)
       //println "username: ${c.getName()}"
       /*if (c instanceof com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl) {
         //println creds
         echo 'oooooo'
       }*/
-      for (credential in credentials) {
-        println "${credential.getUsername()}"
+      for (c in creds) {
+        println "${c.getUsername()}"
       }
     }
   }
